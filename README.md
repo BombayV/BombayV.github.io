@@ -1,4 +1,4 @@
-<h1 align="center">BombayV.github.io</h1>
+<h1 align="center">Bombay Photos</h1>
 
 <p align="center">My custom website for my photos</p>
 
