@@ -134,6 +134,10 @@ body {
       flex: 100%;
       max-width: 100%;
     }
+
+    .fullscreen {
+        height: 30%;
+    }
 }
 
 /* Animations */
