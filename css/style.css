@@ -22,6 +22,7 @@ body {
   background: #555;
 }
 
+/* Nav bar */
 .nav-container {
     display: flex;
     justify-content: space-evenly;
