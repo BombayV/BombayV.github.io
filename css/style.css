@@ -1,5 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap');
+
 body {
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 0.5vh;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 1vh;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .nav-container {
@@ -14,7 +34,7 @@ body {
     width: 80%;
     height: 10%;
 
-    border-bottom: 0.1vh solid rgb(255, 110, 27);
+    border-bottom: 0.1vh solid #ff6e1b;
 }
 
 .nav-logo {
@@ -51,4 +71,80 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.images-container {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+
+    padding-bottom: 3vh;
+}
+
+.images-row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.images-column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0vh 1vh;
+}
+
+.images-selected {
+    cursor: pointer;
+    margin-top: 0.8vh;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Blur background */
+.blur-background {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+}
+
+/* Full screen */
+.fullscreen {
+    position: fixed;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+/* Fix low resolutions */
+@media screen and (max-width: 800px) {
+    .images-column {
+      -ms-flex: 50%;
+      flex: 40%;
+      max-width: 50%;
+    }
+}
+  
+@media screen and (max-width: 600px) {
+    .images-column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+}
+
+/* Animations */
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
 }
