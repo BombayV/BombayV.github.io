@@ -21,8 +21,6 @@ this.window.onload = ()=> {
     }
 }
 
-
-
 const increaseSize = function() {
     if (!fullscreen) {
         this.classList.add('fullscreen');
@@ -35,7 +33,6 @@ const increaseSize = function() {
         blur.style.display='none'
         fullscreen = false
     }
-
 };
 
 for (let i=0; i < images.length; i++) {
