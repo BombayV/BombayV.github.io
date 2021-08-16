@@ -7,7 +7,7 @@ const blur = doc.getElementById('blur')
 
 let fullscreen = false
 
-this.window.onload = ()=> {
+this.window.addEventListener('load', ()=> {
     logo.style.animation = 'fadeOut 5s forwards';
     wrapper.style.animation='fadeIn 5s forwards';
     setTimeout(function() {
@@ -19,7 +19,7 @@ this.window.onload = ()=> {
     for (let i=0; i < images.length; i++) {
         images[i].addEventListener('click', increaseSize, false);
     }
-}
+})
 
 const increaseSize = function() {
     if (!fullscreen) {
